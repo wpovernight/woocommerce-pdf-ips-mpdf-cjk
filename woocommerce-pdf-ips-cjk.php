@@ -9,7 +9,6 @@
  * Author URI:       https://wpovernight.com
  * License:          GPLv3
  * License URI:      https://opensource.org/licenses/gpl-license.php
- * Text Domain:      woocommerce-pdf-ips-mpdf-cjk
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
