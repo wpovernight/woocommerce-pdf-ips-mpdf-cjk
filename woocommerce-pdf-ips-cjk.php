@@ -22,8 +22,14 @@ function wpo_ips_mpdf_cjk_load_fonts_dir( $mpdf ) {
 	}
 	
 	$mpdf->AddFontDirectory( __DIR__ . '/fonts' );
+	$mpdf->autoScriptToLang = true;
+	$mpdf->autoLangToFont   = true;
+	
+	// Ensures mPDF marks all non-Latin text with lang attributes.
+	// This helps apply the correct font to CJK characters while ignoring regular Latin text.
+	$mpdf->baseScript = 1;
 
 	return $mpdf;
 }
 
-add_filter( 'wpo_wcpdf_before_mpdf_write', 'wpo_ips_mpdf_cjk_load_fonts_dir', 10, 1 );
+add_filter( 'wpo_wcpdf_before_mpdf_write', 'wpo_ips_mpdf_cjk_load_fonts_dir' );
