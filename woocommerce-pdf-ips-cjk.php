@@ -4,7 +4,7 @@
  * Requires Plugins: woocommerce-pdf-ips-mpdf
  * Plugin URI:       https://github.com/wpovernight/woocommerce-pdf-ips-mpdf-cjk
  * Description:      Chinese, Japanese, and Korean font pack for the mPDF extension.
- * Version:          1.0.0
+ * Version:          1.0.1
  * Author:           WP Overnight
  * Author URI:       https://wpovernight.com
  * License:          GPLv3
