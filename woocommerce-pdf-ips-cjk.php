@@ -16,7 +16,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function wpo_ips_mpdf_cjk_load_fonts_dir( $mpdf ) {
-	if ( ! $mpdf instanceof \Mpdf\Mpdf || ! method_exists( $mpdf, 'AddFontDirectory' ) ) {
+	if (
+		( ! $mpdf instanceof \WPO\IPS\Mpdf\Vendor\Mpdf\Mpdf && ! $mpdf instanceof \Mpdf\Mpdf ) ||
+		! method_exists( $mpdf, 'AddFontDirectory' )
+	) {
 		wcpdf_log_error( 'wpo_ips_mpdf_cjk_load_fonts_dir: mPDF not found or AddFontDirectory method not available' );
 		return $mpdf;
 	}
